@@ -13,11 +13,11 @@ In this lecture we will go through key concepts such as **Google Generative AI P
 Gemini 2.0 Flash is an **experimental AI model** by Google, accessible through the **[Gemini Developer API](https://ai.google.dev/)** and **Google AI Studio**. This model is an enhancement over its predecessors, featuring **faster response times, improved accuracy, and multimodal capabilities** (processing text, images, and audio in real-time).
 
 #### 🔑 **Key Features:**
-- **Multimodal API:** Supports **real-time text, vision, and audio interactions**. 👁️🔊
-- **Enhanced Speed:** Generates responses faster, reducing latency. ⚡️
-- **Superior Quality:** Outperforms previous Gemini versions in processing efficiency. 🏆
-- **Agentic Capabilities:** Excels in handling **images, audio, and code generation** tasks. 💻💬
-- **New Modalities:** Supports **image generation and text-to-speech conversion**. 🖼️🎙️
+- **Multimodal API:** Supports **real-time text, vision, and audio interactions**. 
+- **Enhanced Speed:** Generates responses faster, reducing latency. 
+- **Superior Quality:** Outperforms previous Gemini versions in processing efficiency. 
+- **Agentic Capabilities:** Excels in handling **images, audio, and code generation** tasks.
+- **New Modalities:** Supports **image generation and text-to-speech conversion**. 
 
 ---
 
@@ -138,7 +138,7 @@ image.show()
 You can utilize the Gemini model for image recognition by passing an image as input and requesting a description or object identification.  
 
 - The model processes the image and returns insights about its contents.  
-- Responses can be generated in **JSON format** or other structured formats based on your needs. 📊  
+- Responses can be generated in **JSON format** or other structured formats based on your needs.   
 
 ### 8️⃣ Stateless vs. Stateful Chat 💬
 **Stateless Mode**
@@ -147,7 +147,7 @@ Ideal for single-question responses where context is not required.
 Example: Asking a general question without referring to previous exchanges.
 
 **Stateful Mode**
-The model remembers past interactions, enabling a seamless, ongoing conversation. 📜💭
+The model remembers past interactions, enabling a seamless, ongoing conversation. 
 Useful for multi-turn dialogues, where context from earlier messages improves responses.
 Example: Having a back-and-forth conversation where the model recalls previous queries.
 
@@ -160,14 +160,14 @@ print(chat.history)
 ### 9️⃣ Tokens and Temperature 🔥
 
 #### **Tokens**  
-Tokens represent individual units of text processed by the model while generating responses. 🧾  
-- The number of tokens used affects **response length** and **computational cost**. 💰  
+Tokens represent individual units of text processed by the model while generating responses. 
+- The number of tokens used affects **response length** and **computational cost**. 
 - Limiting token usage helps manage API consumption efficiently.  
 
 #### **Temperature**  
 The **temperature setting** determines how creative or deterministic the AI’s responses will be:  
-- **Low Temperature (e.g., 0.2 - 0.4)** → Produces **consistent and focused** outputs. 🎯  
-- **High Temperature (e.g., 0.8 - 1.2)** → Generates **more diverse and imaginative** responses. 🎨  
+- **Low Temperature (e.g., 0.2 - 0.4)** → Produces **consistent and focused** outputs. 
+- **High Temperature (e.g., 0.8 - 1.2)** → Generates **more diverse and imaginative** responses. 
 
 ---
 
@@ -175,7 +175,7 @@ The **temperature setting** determines how creative or deterministic the AI’s 
 
 During our discussion, we explored the **OpenAI API** options, including **ChatGPT and GPT-4**.  
 - Although OpenAI provides powerful AI models, **it is not free**, making it unsuitable for our course.  
-- For this reason, we are currently using **Google's Gemini API**, which offers similar capabilities without cost constraints. 💡  
+- For this reason, we are currently using **Google's Gemini API**, which offers similar capabilities without cost constraints. 
 
 
 ---
@@ -194,14 +194,24 @@ Gain hands-on experience with the Gemini model by writing a simple prompt, gener
 
 #### **Code for Task:**
 ```python
+# 1️⃣ Importing the Required Library
 import google.generativeai as genai
 
+# 2️⃣ Configuring the API Key
 genai.configure(api_key="YOUR_API_KEY")
 
+# 3️⃣ Initializing the Gemini Model
 model = genai.GenerativeModel('gemini-1.5-flash')
+
+# 4️⃣ Creating a Prompt for AI Response
 prompt = "Hello, Gemini! Tell me a fun fact about AI."
+
+# 5️⃣ Generating AI Response
 response = model.generate_content(prompt)
+
+# 6️⃣ Printing the Response
 print(response.text)
+
 ```
 
 ---
